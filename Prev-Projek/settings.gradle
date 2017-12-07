@@ -1,0 +1,4 @@
+rootProject.name = 'TugasBesar2_2017'
+
+include ':WebApp'
+include ':IdentityService', ':WebService'

@@ -1,0 +1,25 @@
+plugins {
+    id 'org.akhikhl.gretty' version '2.0.0'
+}
+
+dependencies {
+    // https://mvnrepository.com/artifact/mysql/mysql-connector-java
+    gretty 'mysql:mysql-connector-java:8.0.8-dmr'
+
+    // https://mvnrepository.com/artifact/com.sun.xml.ws/jaxws-ri
+    gretty 'com.sun.xml.ws:jaxws-ri:2.3.0'
+}
+
+allprojects {
+    repositories {
+        jcenter()
+
+        maven {
+            url 'http://download.eclipse.org/rt/eclipselink/maven.repo'
+        }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

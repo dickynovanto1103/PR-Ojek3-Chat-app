@@ -1,0 +1,80 @@
+--
+-- Table structure for table `accounts`
+--
+
+DROP TABLE IF EXISTS `accounts`;
+
+CREATE TABLE `accounts` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(20) NOT NULL,
+  `password` char(60) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY (`username`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+--
+-- Table structure for table `tokens`
+--
+
+DROP TABLE IF EXISTS `tokens`;
+
+CREATE TABLE `tokens` (
+  `token` char(60) NOT NULL,
+  `account_id` int(11) NOT NULL,
+  `expire_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`token`),
+  FOREIGN KEY (`account_id`) REFERENCES `accounts` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+--
+-- Mock data for table `accounts`
+--
+
+INSERT INTO `accounts` (`id`,`username`,`password`) VALUES (1,'nrasor0','$2b$12$QsdyUjhOkVPoUqNzfrDAAuvr27cto3XvxPwd5zP23NSHrSfEWoBQq');
+INSERT INTO `accounts` (`id`,`username`,`password`) VALUES (2,'trene1','$2b$12$Q/nLA6fdU5UWdTCUqViYB.Q3ju0w1e58156NCY9RzREfUuVnyUvYm');
+INSERT INTO `accounts` (`id`,`username`,`password`) VALUES (3,'iscroggins2','$2b$12$RcvU2CR3TzekoMPogwmvpeet4VHREEgYICrkTwtFJgV9td9UXpHu.');
+INSERT INTO `accounts` (`id`,`username`,`password`) VALUES (4,'fgrote3','$2b$12$sv7UIBeL7i.X3qJkj/Jzce9v4FcUFfgF2W2Qw44e2FPanI/wzGlXG');
+INSERT INTO `accounts` (`id`,`username`,`password`) VALUES (5,'ewennam4','$2b$12$vw9Pk3noKK8T4C.5TlypPOPFjZUAdYlAu/cgySO4NpQBXeP5FtZPW');
+INSERT INTO `accounts` (`id`,`username`,`password`) VALUES (6,'gkruschev5','$2b$12$febaWltOYJfeTAkcHFt/heyTGO2u9.gASlhYHjJwJmC72e8J30KPy');
+INSERT INTO `accounts` (`id`,`username`,`password`) VALUES (7,'crofe6','$2b$12$XOwlbgSpxGzmdLxq0iQNhuomazQpQZt94lZNAx6q2dbyQJ9xgfHAO');
+INSERT INTO `accounts` (`id`,`username`,`password`) VALUES (8,'dkidney7','$2b$12$RwtNrrDI6701NQNx8536iOpwBvc4lRua5IZ9Nn4ff19opDHCQh042');
+INSERT INTO `accounts` (`id`,`username`,`password`) VALUES (9,'mcrossley8','$2b$12$KEga4f0eQH.YUbusmvojZes4Zo4LmVC8XUz8TC8oFAs1NIJn12Fqi');
+INSERT INTO `accounts` (`id`,`username`,`password`) VALUES (10,'mbase9','$2b$12$MifEvi6DHcB.S0ye2peZa.ePI5PyD48D2TTdqxPPyO8xQlgCXzceu');
+INSERT INTO `accounts` (`id`,`username`,`password`) VALUES (11,'cburressa','$2b$12$HOo4eG3wXs2klxTfH4GuM.iKK9HiZM8Jm5l/JZd4fccn/1nZnLSfe');
+INSERT INTO `accounts` (`id`,`username`,`password`) VALUES (12,'bbarkesb','$2b$12$z2sF6iHwkfekh1bNRNWYH.rRE6R53MsqyB43g/cx.VLssB7yj4nwS');
+INSERT INTO `accounts` (`id`,`username`,`password`) VALUES (13,'gcolledgec','$2b$12$it2/qgMb4jVMTkdeTIkD8eNZTIudiVqAAP7U32qLDuVQkd1A31b/S');
+INSERT INTO `accounts` (`id`,`username`,`password`) VALUES (14,'hhugnotd','$2b$12$E/BR3eil1CBL726FuNrQGuJsap4N4yA5yRjBgZZDbOCJHvFZ8nbsa');
+INSERT INTO `accounts` (`id`,`username`,`password`) VALUES (15,'mrookwelle','$2b$12$RQyvvh4TG6LC5ainjMG1t.Dlvq40FdzUznNTbmFqMY6JG7nV/jKAS');
+INSERT INTO `accounts` (`id`,`username`,`password`) VALUES (16,'egraithf','$2b$12$tz9p7/bp6IswD6vofrLw0ebty2iTSkVtsEA7ki6vLelfeMKxynltS');
+INSERT INTO `accounts` (`id`,`username`,`password`) VALUES (17,'cmagnarg','$2b$12$TLLlwRRTzmxfQ8v6Man9NOMKbYXV9S4kUmAIWXKwawYxATWZXkpai');
+INSERT INTO `accounts` (`id`,`username`,`password`) VALUES (18,'nbyrnesh','$2b$12$fbztt0hnQTvLHO5sMYyd9OXV/LSmDv2RRfs/7/gWAumKW/ssexhBi');
+INSERT INTO `accounts` (`id`,`username`,`password`) VALUES (19,'candreassoni','$2b$12$CMwwlFs8NI8c4qjdhHgS3e9eW51V2y3A8LZXyMFs4b73nl.p1hDqa');
+INSERT INTO `accounts` (`id`,`username`,`password`) VALUES (20,'kelsej','$2b$12$ZNU6bd2mm.b7hIALcE09BunVm6WKoX/WtFRLoQ0JvdfFFTO6GbwI.');
+INSERT INTO `accounts` (`id`,`username`,`password`) VALUES (21,'khusherk','$2b$12$b9RreO3ufLswTsQ6iXOdI.5UTSexz5f6fikjwQdy2oMCOJhJgWVmO');
+INSERT INTO `accounts` (`id`,`username`,`password`) VALUES (22,'rrodolfl','$2b$12$0zbzKmbRV9DLl4z4.Djmt.TykjQnpoEYrPay8V78sJXEZYl8k3TjS');
+INSERT INTO `accounts` (`id`,`username`,`password`) VALUES (23,'igofordm','$2b$12$E/nAk44QdnK6.JCLoy0u8e0u3NAZ8frO4y2S1wr5X2WhR3aa3MTCa');
+INSERT INTO `accounts` (`id`,`username`,`password`) VALUES (24,'ntollen','$2b$12$Z9GlnsgULejoRY03GZ58pOBocv1nOCufEBahkJqf2FDNtyaB61Y.S');
+INSERT INTO `accounts` (`id`,`username`,`password`) VALUES (25,'bbettyo','$2b$12$ImD8DvBLmYa0XR0FUHZ0K.sAuElOymE.TjjhfpQP.pKTEkw7vFoOG');
+INSERT INTO `accounts` (`id`,`username`,`password`) VALUES (26,'hbeaulyp','$2b$12$4OYO32ggTeX701hNQTEXbulrjK8dep.bgqhXrBTLA1SfSNpJGU5ii');
+INSERT INTO `accounts` (`id`,`username`,`password`) VALUES (27,'ijosephoffq','$2b$12$cTL37AJ3TkTNlE7IqyjrU.kmEipPWZ9jFXsISz3Pw21j7JhbmXqHS');
+INSERT INTO `accounts` (`id`,`username`,`password`) VALUES (28,'iscargillr','$2b$12$lqk3CGUMVY0vP/D.soogiuSf7eAJiGlxeTvBtBKspSCeycetHCYne');
+INSERT INTO `accounts` (`id`,`username`,`password`) VALUES (29,'mponds','$2b$12$NqlIkrrUiYcaUN4grmIBwO0a.3NpqjEKt/pwVGcG14mZXZgsrIJhG');
+INSERT INTO `accounts` (`id`,`username`,`password`) VALUES (30,'tnewlant','$2b$12$moxvDihdvtb5JlG3PJUiIezFdtIlE7aaa7itp/612OynT1aotYGDK');
+INSERT INTO `accounts` (`id`,`username`,`password`) VALUES (31,'gmckyrrellyu','$2b$12$93TNLO6BDtclSyOW1GNjN.uc9m/zxQeFT8r99bcMZDc21x22mNJuW');
+INSERT INTO `accounts` (`id`,`username`,`password`) VALUES (32,'dhugev','$2b$12$LcMKj9DXGh66Vgd2sey63up4mfwU81D4bYgYje/v0DHtr4cn5F08O');
+INSERT INTO `accounts` (`id`,`username`,`password`) VALUES (33,'lkieferw','$2b$12$E5w3wTVQc4b3Jyulr8fEEunI3iLwY/Mbh8Teljbv55bx.lhbzeK96');
+INSERT INTO `accounts` (`id`,`username`,`password`) VALUES (34,'dwoodsx','$2b$12$/YSSbAVk7qsbV9UY3dmvkOdzunrsCnQYQkHJqIRL/yYupO7KVcUMO');
+INSERT INTO `accounts` (`id`,`username`,`password`) VALUES (35,'gladlowy','$2b$12$bEMI05h5oFA6vPquSjR/u.MzN2ZFHpCyj9i3IYMQsslntulldYoXK');
+INSERT INTO `accounts` (`id`,`username`,`password`) VALUES (36,'gswatmanz','$2b$12$OpMk6aOQ635Q3AUHc9cAPO9k7AXOnjngj5WKhYU3pCONHJtypHRKy');
+INSERT INTO `accounts` (`id`,`username`,`password`) VALUES (37,'afrape10','$2b$12$.A/5xs5udjZ0uLsqlqosi.Nse.n.NDXATJZCsU5eqyxnChXHdov0y');
+INSERT INTO `accounts` (`id`,`username`,`password`) VALUES (38,'thinkensen11','$2b$12$Vpk57QYwx.iMwugwUHZmWuXS41EiRHJNvv0EtsbRyls.wJvbOz8SW');
+INSERT INTO `accounts` (`id`,`username`,`password`) VALUES (39,'tfuentez12','$2b$12$HBYsirJxalhKI0YRjKQ.nOfdVuBt1WFDORVWpYd8M5Gbp8muulAAG');
+INSERT INTO `accounts` (`id`,`username`,`password`) VALUES (40,'welsley13','$2b$12$jhQSLg5pki0xJ73BXSeQvOA.jXNcBiF7GE2pVMripoEX/WuWqKqwy');
+INSERT INTO `accounts` (`id`,`username`,`password`) VALUES (41,'rbasset14','$2b$12$y96hO9JNmth/rAQa3YZwOOWxcJARa68KafHG7v.MYBWJV4DuA2eFG');
+INSERT INTO `accounts` (`id`,`username`,`password`) VALUES (42,'cronchi15','$2b$12$fTtSiYus4Ww.rFd4HnaywehGOdqRKCl3sCGHotVrAsSleEYdhWAL6');
+INSERT INTO `accounts` (`id`,`username`,`password`) VALUES (43,'psowersby16','$2b$12$efuq/jqO2vcFtksHtelKTewHBGMglvkzu5u9Xkj/JU1I0DJJgcMlq');
+INSERT INTO `accounts` (`id`,`username`,`password`) VALUES (44,'hgilpin17','$2b$12$k71Jqp6Vv5XMB0FUiTGEZuppxRvnArdTlzLCbPZFYuRfowu5hPszO');
+INSERT INTO `accounts` (`id`,`username`,`password`) VALUES (45,'lvinton18','$2b$12$I7o2vPjBR4Z78XYL3XpoJOBMSSoBzJ4rOydYswhye2mSueqEb30U.');
+INSERT INTO `accounts` (`id`,`username`,`password`) VALUES (46,'bmatveyev19','$2b$12$mxHuDoWPvTjCrcM7FuEEdeFMqU3xxtUr7OVuOdNQ1XA7HOWPLOVmy');
+INSERT INTO `accounts` (`id`,`username`,`password`) VALUES (47,'rcareswell1a','$2b$12$e/lXNhy9jxVO3FwDDh2.xO3LBnQUxibDDPnKlTsmrhZaBcYiku/2K');
+INSERT INTO `accounts` (`id`,`username`,`password`) VALUES (48,'iblaes1b','$2b$12$//exUloBnK3.JaDyMEceCelSlaXKZhnRz52FCgpxWaHDkgmevb3CC');
+INSERT INTO `accounts` (`id`,`username`,`password`) VALUES (49,'cfarmloe1c','$2b$12$eZsp1UcKTdCjM7ogtAjspeH21B/TpGn5heuL7nT4Zd2Bgs5zNm0FC');
+INSERT INTO `accounts` (`id`,`username`,`password`) VALUES (50,'gkleisel1d','$2b$12$oU0Sc/rNhq7Sr/cYg96z2O1T4SW5/DTFKWpB8M/lUQu.F0WVtJxe2');

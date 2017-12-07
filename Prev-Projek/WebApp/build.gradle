@@ -1,0 +1,95 @@
+plugins {
+    id 'java'
+    id 'war'
+    id 'org.akhikhl.gretty'
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+
+    // https://mvnrepository.com/artifact/junit/junit
+    testCompile 'junit:junit:4.12'
+    // https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api
+    providedCompile 'javax.servlet:javax.servlet-api:4.0.0'
+    // https://mvnrepository.com/artifact/javax.json/javax.json-api
+    compile 'javax.json:javax.json-api:1.0'
+    // https://mvnrepository.com/artifact/org.glassfish/javax.json
+    compile 'org.glassfish:javax.json:1.0'
+}
+
+configurations {
+    jaxws
+}
+
+dependencies {
+    jaxws 'com.sun.xml.ws:jaxws-tools:2.3.0'
+}
+
+task wsdlImport {
+    ext.destDir = file("$projectDir/build/generated-sources/wsdlImport/java")
+    doLast {
+        ant {
+            sourceSets.main.output.classesDir.mkdirs()
+            destDir.mkdirs()
+
+            taskdef(name: 'wsimport',
+                    classname: 'com.sun.tools.ws.ant.WsImport',
+                    classpath: configurations.jaxws.asPath
+            )
+
+            wsimport(keep: true,
+                    destdir: sourceSets.main.output.classesDir,
+                    sourcedestdir: destDir,
+                    extension: 'true',
+                    verbose: 'false',
+                    quiet: 'false',
+                    package: 'com.dolorsitamet.projek.app.web.ws',
+                    xnocompile: 'true',
+                    wsdl: 'http://localhost:8080/WebService/profile?wsdl') {
+                xjcarg(value: '-XautoNameResolution')
+            }
+
+            wsimport(keep: true,
+                    destdir: sourceSets.main.output.classesDir,
+                    sourcedestdir: destDir,
+                    extension: 'true',
+                    verbose: 'false',
+                    quiet: 'false',
+                    package: 'com.dolorsitamet.projek.app.web.ws',
+                    xnocompile: 'true',
+                    wsdl: 'http://localhost:8080/WebService/location?wsdl') {
+                xjcarg(value: '-XautoNameResolution')
+            }
+
+            wsimport(keep: true,
+                    destdir: sourceSets.main.output.classesDir,
+                    sourcedestdir: destDir,
+                    extension: 'true',
+                    verbose: 'false',
+                    quiet: 'false',
+                    package: 'com.dolorsitamet.projek.app.web.ws',
+                    xnocompile: 'true',
+                    wsdl: 'http://localhost:8080/WebService/order?wsdl') {
+                xjcarg(value: '-XautoNameResolution')
+            }
+
+            wsimport(keep: true,
+                    destdir: sourceSets.main.output.classesDir,
+                    sourcedestdir: destDir,
+                    extension: 'true',
+                    verbose: 'false',
+                    quiet: 'false',
+                    package: 'com.dolorsitamet.projek.app.web.ws',
+                    xnocompile: 'true',
+                    wsdl: 'http://localhost:8080/WebService/history?wsdl') {
+                xjcarg(value: '-XautoNameResolution')
+            }
+        }
+    }
+}
+
+sourceSets {
+    main {
+        java.srcDir file( "build/generated-sources/wsdlImport/java" )
+    }
+}

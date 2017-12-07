@@ -1,0 +1,54 @@
+--
+-- Mock data for table `users`
+--
+
+INSERT INTO `users` (`id`,`full_name`,`email`,`phone_number`,`is_driver`) VALUES (1,'Noll Rasor','nrasor0@forbes.com','287-742-3969',0);
+INSERT INTO `users` (`id`,`full_name`,`email`,`phone_number`,`is_driver`) VALUES (2,'Talia Rene','trene1@shop-pro.jp','918-683-5558',1);
+INSERT INTO `users` (`id`,`full_name`,`email`,`phone_number`,`is_driver`) VALUES (3,'Irina Scroggins','iscroggins2@google.com','123-306-4816',1);
+INSERT INTO `users` (`id`,`full_name`,`email`,`phone_number`,`is_driver`) VALUES (4,'Fayth Grote','fgrote3@sogou.com','155-698-3085',0);
+INSERT INTO `users` (`id`,`full_name`,`email`,`phone_number`,`is_driver`) VALUES (5,'Ealasaid Wennam','ewennam4@yandex.ru','713-592-2517',1);
+INSERT INTO `users` (`id`,`full_name`,`email`,`phone_number`,`is_driver`) VALUES (6,'Gray Kruschev','gkruschev5@pinterest.com','581-174-7574',0);
+INSERT INTO `users` (`id`,`full_name`,`email`,`phone_number`,`is_driver`) VALUES (7,'Corry Rofe','crofe6@nydailynews.com','730-163-4513',0);
+INSERT INTO `users` (`id`,`full_name`,`email`,`phone_number`,`is_driver`) VALUES (8,'Dorthea Kidney','dkidney7@g.co','473-755-8519',1);
+INSERT INTO `users` (`id`,`full_name`,`email`,`phone_number`,`is_driver`) VALUES (9,'Merralee Crossley','mcrossley8@stumbleupon.com','449-781-2089',1);
+INSERT INTO `users` (`id`,`full_name`,`email`,`phone_number`,`is_driver`) VALUES (10,'Maryann Base','mbase9@tripod.com','601-937-8181',1);
+INSERT INTO `users` (`id`,`full_name`,`email`,`phone_number`,`is_driver`) VALUES (11,'Corinna Burress','cburressa@bloglines.com','704-638-2658',1);
+INSERT INTO `users` (`id`,`full_name`,`email`,`phone_number`,`is_driver`) VALUES (12,'Bobbe Barkes','bbarkesb@wsj.com','738-621-4140',1);
+INSERT INTO `users` (`id`,`full_name`,`email`,`phone_number`,`is_driver`) VALUES (13,'Gery Colledge','gcolledgec@friendfeed.com','391-775-3734',1);
+INSERT INTO `users` (`id`,`full_name`,`email`,`phone_number`,`is_driver`) VALUES (14,'Hedvig Hugnot','hhugnotd@histats.com','347-105-0190',0);
+INSERT INTO `users` (`id`,`full_name`,`email`,`phone_number`,`is_driver`) VALUES (15,'Myranda Rookwell','mrookwelle@youtube.com','151-616-7770',1);
+INSERT INTO `users` (`id`,`full_name`,`email`,`phone_number`,`is_driver`) VALUES (16,'Ebba Graith','egraithf@multiply.com','423-358-4995',0);
+INSERT INTO `users` (`id`,`full_name`,`email`,`phone_number`,`is_driver`) VALUES (17,'Carey Magnar','cmagnarg@chronoengine.com','836-475-5312',0);
+INSERT INTO `users` (`id`,`full_name`,`email`,`phone_number`,`is_driver`) VALUES (18,'Nicolis Byrnes','nbyrnesh@bluehost.com','725-345-9396',0);
+INSERT INTO `users` (`id`,`full_name`,`email`,`phone_number`,`is_driver`) VALUES (19,'Claiborne Andreasson','candreassoni@amazon.com','699-207-9777',1);
+INSERT INTO `users` (`id`,`full_name`,`email`,`phone_number`,`is_driver`) VALUES (20,'Kayla Else','kelsej@deviantart.com','919-362-2069',0);
+INSERT INTO `users` (`id`,`full_name`,`email`,`phone_number`,`is_driver`) VALUES (21,'Kissiah Husher','khusherk@mediafire.com','959-682-5749',0);
+INSERT INTO `users` (`id`,`full_name`,`email`,`phone_number`,`is_driver`) VALUES (22,'Robin Rodolf','rrodolfl@surveymonkey.com','880-421-0400',1);
+INSERT INTO `users` (`id`,`full_name`,`email`,`phone_number`,`is_driver`) VALUES (23,'Izzy Goford','igofordm@privacy.gov.au','230-926-4631',1);
+INSERT INTO `users` (`id`,`full_name`,`email`,`phone_number`,`is_driver`) VALUES (24,'Norman Tolle','ntollen@tmall.com','643-269-5266',0);
+INSERT INTO `users` (`id`,`full_name`,`email`,`phone_number`,`is_driver`) VALUES (25,'Bond Betty','bbettyo@xinhuanet.com','263-906-3764',0);
+INSERT INTO `users` (`id`,`full_name`,`email`,`phone_number`,`is_driver`) VALUES (26,'Hanson Beauly','hbeaulyp@businesswire.com','420-379-6510',1);
+INSERT INTO `users` (`id`,`full_name`,`email`,`phone_number`,`is_driver`) VALUES (27,'Iris Josephoff','ijosephoffq@gizmodo.com','231-857-2452',1);
+INSERT INTO `users` (`id`,`full_name`,`email`,`phone_number`,`is_driver`) VALUES (28,'Inessa Scargill','iscargillr@yelp.com','586-855-4720',1);
+INSERT INTO `users` (`id`,`full_name`,`email`,`phone_number`,`is_driver`) VALUES (29,'Maryl Pond','mponds@posterous.com','297-372-6191',0);
+INSERT INTO `users` (`id`,`full_name`,`email`,`phone_number`,`is_driver`) VALUES (30,'Torey Newlan','tnewlant@ucla.edu','564-749-6966',0);
+INSERT INTO `users` (`id`,`full_name`,`email`,`phone_number`,`is_driver`) VALUES (31,'Goraud McKyrrelly','gmckyrrellyu@cornell.edu','509-304-8372',0);
+INSERT INTO `users` (`id`,`full_name`,`email`,`phone_number`,`is_driver`) VALUES (32,'Deena Huge','dhugev@oaic.gov.au','917-224-8099',1);
+INSERT INTO `users` (`id`,`full_name`,`email`,`phone_number`,`is_driver`) VALUES (33,'Lammond Kiefer','lkieferw@wsj.com','132-306-0557',0);
+INSERT INTO `users` (`id`,`full_name`,`email`,`phone_number`,`is_driver`) VALUES (34,'Dyna Woods','dwoodsx@theglobeandmail.com','644-439-7090',0);
+INSERT INTO `users` (`id`,`full_name`,`email`,`phone_number`,`is_driver`) VALUES (35,'Gretchen Ladlow','gladlowy@webmd.com','242-278-4112',0);
+INSERT INTO `users` (`id`,`full_name`,`email`,`phone_number`,`is_driver`) VALUES (36,'Grant Swatman','gswatmanz@abc.net.au','722-546-0008',1);
+INSERT INTO `users` (`id`,`full_name`,`email`,`phone_number`,`is_driver`) VALUES (37,'Aaron Frape','afrape10@wikimedia.org','910-942-1504',0);
+INSERT INTO `users` (`id`,`full_name`,`email`,`phone_number`,`is_driver`) VALUES (38,'Trace Hinkensen','thinkensen11@bigcartel.com','282-296-3193',0);
+INSERT INTO `users` (`id`,`full_name`,`email`,`phone_number`,`is_driver`) VALUES (39,'Torrence Fuentez','tfuentez12@edublogs.org','792-587-3534',1);
+INSERT INTO `users` (`id`,`full_name`,`email`,`phone_number`,`is_driver`) VALUES (40,'Waylin Elsley','welsley13@jiathis.com','359-370-8910',1);
+INSERT INTO `users` (`id`,`full_name`,`email`,`phone_number`,`is_driver`) VALUES (41,'Roddie Basset','rbasset14@yellowbook.com','262-944-8201',1);
+INSERT INTO `users` (`id`,`full_name`,`email`,`phone_number`,`is_driver`) VALUES (42,'Carrol Ronchi','cronchi15@about.com','535-438-2425',0);
+INSERT INTO `users` (`id`,`full_name`,`email`,`phone_number`,`is_driver`) VALUES (43,'Poul Sowersby','psowersby16@wiley.com','287-729-2163',1);
+INSERT INTO `users` (`id`,`full_name`,`email`,`phone_number`,`is_driver`) VALUES (44,'Haleigh Gilpin','hgilpin17@usgs.gov','407-181-8605',0);
+INSERT INTO `users` (`id`,`full_name`,`email`,`phone_number`,`is_driver`) VALUES (45,'Lyman Vinton','lvinton18@mayoclinic.com','939-942-5068',0);
+INSERT INTO `users` (`id`,`full_name`,`email`,`phone_number`,`is_driver`) VALUES (46,'Belva Matveyev','bmatveyev19@msn.com','693-875-4782',0);
+INSERT INTO `users` (`id`,`full_name`,`email`,`phone_number`,`is_driver`) VALUES (47,'Rustie Careswell','rcareswell1a@paypal.com','730-239-3442',1);
+INSERT INTO `users` (`id`,`full_name`,`email`,`phone_number`,`is_driver`) VALUES (48,'Ingrim Blaes','iblaes1b@moonfruit.com','352-724-7000',0);
+INSERT INTO `users` (`id`,`full_name`,`email`,`phone_number`,`is_driver`) VALUES (49,'Chrisse Farmloe','cfarmloe1c@deliciousdays.com','170-593-2194',1);
+INSERT INTO `users` (`id`,`full_name`,`email`,`phone_number`,`is_driver`) VALUES (50,'Graeme Kleisel','gkleisel1d@symantec.com','541-675-4200',1);

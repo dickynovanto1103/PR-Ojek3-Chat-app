@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="Gradle : TugasBesar2_2017 : WebService.war">
+    <output-path>$PROJECT_DIR$/WebService/build/libs</output-path>
+    <properties id="gradle-properties">
+      <options external-project-path="$PROJECT_DIR$" />
+    </properties>
+    <root id="archive" name="WebService.war">
+      <element id="artifact" artifact-name="Gradle : TugasBesar2_2017 : WebService.war (exploded)" />
+    </root>
+  </artifact>
+</component>

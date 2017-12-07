@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/IdentityService/IdentityService.iml" filepath="$PROJECT_DIR$/.idea/modules/IdentityService/IdentityService.iml" group="IdentityService" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/IdentityService/IdentityService_main.iml" filepath="$PROJECT_DIR$/.idea/modules/IdentityService/IdentityService_main.iml" group="IdentityService" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/IdentityService/IdentityService_test.iml" filepath="$PROJECT_DIR$/.idea/modules/IdentityService/IdentityService_test.iml" group="IdentityService" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/TugasBesar2_2017.iml" filepath="$PROJECT_DIR$/.idea/modules/TugasBesar2_2017.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/WebApp/WebApp.iml" filepath="$PROJECT_DIR$/.idea/modules/WebApp/WebApp.iml" group="WebApp" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/WebApp/WebApp_main.iml" filepath="$PROJECT_DIR$/.idea/modules/WebApp/WebApp_main.iml" group="WebApp" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/WebApp/WebApp_test.iml" filepath="$PROJECT_DIR$/.idea/modules/WebApp/WebApp_test.iml" group="WebApp" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/WebService/WebService.iml" filepath="$PROJECT_DIR$/.idea/modules/WebService/WebService.iml" group="WebService" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/WebService/WebService_main.iml" filepath="$PROJECT_DIR$/.idea/modules/WebService/WebService_main.iml" group="WebService" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/WebService/WebService_test.iml" filepath="$PROJECT_DIR$/.idea/modules/WebService/WebService_test.iml" group="WebService" />
+    </modules>
+  </component>
+</project>

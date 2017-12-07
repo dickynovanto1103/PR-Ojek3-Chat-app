@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id=":IdentityService" external.linked.project.path="$MODULE_DIR$/../../../IdentityService" external.root.project.path="$MODULE_DIR$/../../.." external.system.id="GRADLE" external.system.module.group="TugasBesar2_2017" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../../IdentityService">
+      <excludeFolder url="file://$MODULE_DIR$/../../../IdentityService/.gradle" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../IdentityService/build" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../IdentityService/out" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

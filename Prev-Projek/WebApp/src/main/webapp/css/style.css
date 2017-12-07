@@ -1,0 +1,901 @@
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+
+    max-width: 680px;
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Validate. */
+
+.validate {
+    position: relative;
+    display: flex;
+}
+
+.validate input {
+    flex-grow: 1;
+    width: 100px;
+}
+
+/* Validate Tooltip. */
+
+.validate .tooltip {
+    font-size: 0.7em;
+    background-color: black;
+    color: #fff;
+    padding: 5px 10px;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.validate input:focus + .tooltip.show {
+    opacity: 1;
+}
+
+/* Validate Badge. */
+
+.validate .badge {
+    overflow: hidden;
+    font-weight: bold;
+    align-self: center;
+
+    width: 0px;
+    transition: width 0.5s ease;
+}
+
+.validate .badge::after {
+    display: inline-block;
+    width: 20px;
+
+    text-align: right;
+}
+
+.validate .badge.show {
+    width: 20px;
+}
+
+.validate input:focus ~ .badge {
+    width: 0px;
+}
+
+.validate .badge[data-badge=valid]::after {
+    content: '\2713';
+}
+
+.validate .badge[data-badge=invalid]::after {
+    content: '\2717';
+}
+
+.validate .badge[data-badge=error]::after {
+    content: '!';
+}
+
+/* Title. */
+
+.title {
+    font-family: 'Bebas Neue', 'Arial Narrow', sans-serif;
+    font-size: 2.8em;
+    font-weight: bold;
+
+}
+
+/* Login card. */
+
+.login {
+    flex-grow: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-card {
+    background: yellowgreen;
+    border: 10px solid green;
+    border-radius: 50px;
+
+    flex-grow: 1;
+    max-width: 330px;
+
+    margin: 30px 0px 30px 0px;
+    padding: 0px 20px 30px 20px;
+}
+
+@media(max-width: 450px) {
+    .login-card {
+        border: none;
+        border-radius: 0px;
+        margin: 0px;
+
+        max-width: 450px;
+        align-self: stretch;
+    }
+}
+
+.login-card > .title {
+    color: green;
+    display: flex;
+    align-items: center;
+
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.login-card > .title::before, .login-card > .title::after {
+    border-top: 2px solid green;
+    content: '';
+
+    width: 100%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+/* Login form. */
+
+.login-form {
+    margin: 0 auto;
+
+    list-style-type: none;
+    padding: 0px;
+}
+
+.login-form li {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.login-form li:last-child {
+    margin: 32px 0px 64px 0px;
+
+    justify-content: space-between;
+}
+
+.login-form > li > label {
+    color: green;
+    font-size: 18px;
+}
+
+.login-form > li > label:first-child {
+    flex: 0 0 140px;
+}
+
+.login-form > li > label:first-child + * {
+    flex: 1 1;
+    width: 100px;
+    margin: 5px 0px 5px 0px;
+}
+
+.login-form .validate input[type="text"],
+.login-form .validate input[type="password"] {
+    border: solid 2px green;
+    padding: 4px 0px 4px 3px;
+
+    transition: border-color 0.5s ease;
+}
+
+.login-form .validate:not([data-status]) input[type="text"],
+.login-form .validate:not([data-status]) input[type="password"] {
+    border-color: green !important;
+}
+
+.login-form .validate:not([data-status="valid"]) input[type="text"],
+.login-form .validate:not([data-status="valid"]) input[type="password"] {
+    border-color: red;
+}
+
+.login-link-register {
+    font-size: 0.9em;
+    color: black;
+}
+
+.login-form > li input[type="submit"] {
+    font-size: 25px;
+    background-color: #82d800;
+
+    border: 2px solid #000000;
+    border-radius: 8px;
+    padding: 4px 24px 4px 24px;
+
+    cursor: pointer;
+}
+
+@media(max-width: 450px) {
+    .login-form > li > input[type="submit"] {
+        margin: 8px 0px 0px 0px;
+    }
+}
+
+/* Register form. */
+
+.register-form > li > label {
+    font-size: inherit;
+}
+
+.register-field-driver {
+    color: green;
+    margin: 12px 0px 0px 0px;
+}
+
+.register-form li:last-child {
+    margin: 16px 0px 32px 0px;
+}
+
+.register-form > li input[type="submit"] {
+    padding: 4px 8px 4px 8px;
+}
+
+/* Header. */
+
+.status {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.login-info {
+    padding-top: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+/* Logo. */
+
+.logo {
+    margin-bottom: 10px;
+}
+
+.logo > .title > span:first-child {
+    color: green;
+}
+
+.logo > .title > span:last-child {
+    color: red;
+}
+
+.logo > .sub-title {
+    color: yellowgreen;
+    margin-top: -10px;
+}
+
+/* Navtab. */
+
+.navtab {
+    width: 100%;
+
+    display: flex;
+}
+
+.navtab > a {
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    border: solid 2px black;
+    border-left: none;
+
+    width: 0px;
+    flex-grow: 1;
+    text-align: center;
+
+    text-transform: uppercase;
+}
+
+.navtab > a:first-child {
+    border-left: solid 2px black;
+}
+
+.navtab > a.selected {
+    background-color: green;
+    color: white;
+}
+
+.navtab_order {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navtab_order > a{
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    border: solid 2px black;
+    background-color: white;
+    width: 185px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+}
+
+.navtab_order > a > .number{
+    background-color: #CCCCCC;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navtab_order > a > .text{
+    text-align: left;
+}
+
+.navtab_order > a.selected_order {
+    background-color: #f9f3a9;
+}
+
+/* Profile */
+
+.edit-button a{
+    text-decoration: none;
+    color: #ff8b0e;
+    font-size: 30px;
+}
+
+.edit-button div{
+    -ms-transform: rotate(180deg); /* IE 9 */
+    -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+    transform: rotate(180deg);
+}
+
+.profile-title-container > .section-title, .profile-title-container > .edit-button{
+    display: inline-block;
+}
+
+.profile-title-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.image-circle {
+    border-radius: 50%;
+    border: inset 6px black;
+    height: 125px;
+    width: 125px;
+    align-self: center;
+    margin-bottom: 5px;
+}
+.image-select_driver {
+    float: left;
+    margin: 0 0 10px 10px;
+}
+
+.profile-content-container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-family: "Arial";
+}
+
+.profile-information-container{
+    margin-top: -10px;
+
+}
+
+#driver-status {
+    color: orange;
+}
+
+.location-title-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+/* list container */
+
+.list-container {
+    margin-left: -40px;
+    margin-top: -20px;
+}
+.list-container ul{
+    list-style: none;
+}
+
+.list-container li{
+    list-style: none;
+    margin-bottom: 5px;
+}
+
+.list-container ul li:before{
+    content: "\25b6";
+}
+
+/* Edit profile */
+
+.upload-picture-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.img-file-input {
+    margin-top: 10px;
+    position: relative;
+}
+
+.dummy {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+}
+
+.dummy > div {
+    width: 70px;
+    height: 22.4px;
+    font-size: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #dddddd;
+    margin-left: 10px;
+    justify-content: center;
+}
+
+.dummy > div > p {
+    margin: 2px;
+}
+
+.file {
+    position: relative;
+    text-align: right;
+    opacity: 0;
+    -moz-opacity: 0;
+    filter: alpha(opacity 0);
+    z-index: 2;
+}
+
+.square-image {
+    width: 150px;
+    height: 150px;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.square-image > img {
+    width: 150px;
+    height: 150px;
+    border: solid 3px black;
+    display: inline-block;
+}
+
+.box {
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+    border:black solid 1px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.box1 {
+
+    border:black solid 1px;
+}
+
+.edit-name-phone-container {
+    margin-left: -40px;
+}
+
+.edit-name-phone-container ul {
+    list-style: none;
+}
+
+.edit-name-phone-container li {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.edit-name-phone-container li > input{
+    width: 60%;
+    max-width: 500px;
+}
+
+.edit-name-phone-container li > label{
+    height: 33px;
+    font-size: 20px;
+}
+
+.save-button input {
+    height: 40px;
+    width: 65px;
+    border: solid 1.5px black;
+    border-radius: 10px;
+    background-color: yellowgreen;
+}
+
+.back-save-buttons {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* kotak switch */
+
+.driver-status-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+/*color rating*/
+
+.color-rating{
+    color: orange;
+}
+
+.driver-status-switch input {
+    display:none;
+}
+
+/* bulatan switch */
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: green;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* ujung slider */
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* Back button */
+
+.back-button a{
+    text-decoration: none;
+    color: initial;
+    appearance: button;
+    padding: 12px 12px 12px 12px;
+    font-size: 14px;
+    border-style: none;
+}
+
+.back-button {
+    height: 30px;
+    width: 50px;
+    border: solid 1.5px black;
+    border-radius: 10px;
+    background-color: red;
+    padding: 6px 12px 0px 0px;
+}
+
+/* Edit prefered location */
+
+.edit-location-content-container {
+    margin-bottom: 50px;
+}
+
+table input {
+    border: none;
+    background-color: white;
+}
+
+table {
+    width:100%;
+    max-width: 680px;
+    border-collapse: collapse;
+}
+
+th:nth-child(1), td:nth-child(1) {
+    width: 30px;
+}
+
+th:nth-child(3), td:nth-child(3) {
+    width: 70px;
+}
+
+input[name="edit-button"] {
+    color: orange;
+    -ms-transform: rotate(180deg); /* IE 9 */
+    -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+    transform: rotate(180deg);
+}
+
+th, td{
+    padding: 4px;
+    height: 25px;
+}
+
+table, th, td {
+    border: solid 1px #CCCCCC;
+}
+
+.add-text-input input {
+    border: solid 1px #CCCCCC;
+    width: 100%;
+    max-width: 600px;
+}
+
+.add-new-location input{
+    height: 26px;
+}
+
+.add-new-location {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-bottom: 45px;
+}
+
+.add-text-input {
+    width: 85%;
+}
+.add-button input{
+    width: 65px;
+    height: 30px;
+    border: solid 1.5px black;
+    border-radius: 10px;
+    background-color: yellowgreen;
+}
+
+/* Order */
+
+.outer-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.order-form{
+    width: 100%;
+    max-width: 500px;
+}
+
+.order-form input{
+    width: 70%;
+    max-width: 450px;
+    height: 25px;
+}
+
+.next-button {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#next-button{
+    background-color: yellowgreen;
+    border: 1.5px solid black;
+    height:40px;
+    width:100px;
+    border-radius: 10px;
+    align-items: center;
+    font-size: 20px;
+}
+
+.choose-driver-button {
+    margin-left: 230px;
+    background-color: #82d800;
+    border: 1.5px solid black;
+    height:40px;
+    width:200px;
+    border-radius: 10px;
+    align-items: center;
+    font-size: 20px;
+}
+
+/*Select Driver*/
+
+.other-driver-profile-content {
+    display: inline-block;
+}
+
+.driver-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.name-rating-info > p:nth-child(2) {
+    margin-top: -20px;
+}
+
+.name-rating-info > p:nth-child(1) {
+    font-size: 25px;
+}
+
+.square-image-driver {
+    width: 150px;
+    height: 150px;
+    margin-right: 30px;
+    display: inline-block;
+}
+
+.square-image-driver > img {
+    width: 150px;
+    height: 150px;
+    border: solid 3px black;
+}
+
+/* Complete Order */
+.profile-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-info > .full-name{
+    margin-top: 10px;
+}
+
+.profile-info > .user-name{
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.rating-comment {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.rating-box {
+    margin-top: 20px;
+}
+
+.comment-box {
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+    height: 120px;
+}
+
+.comment-box-input {
+    width: 100%;
+
+}
+
+.comment-box-input > input{
+    width: 100%;
+    height: 50px;
+
+}
+
+.comment-box-button input{
+    border: solid 1.5px black;
+    background-color: #82d800;
+    border-radius: 8px;
+    height: 40px;
+}
+
+/* History. */
+
+.history-navtab {
+    margin-bottom: 15px;
+}
+
+.history {
+    display: flex;
+    align-items: center;
+
+    font-size: 0.8em;
+    padding: 10px 0px;
+}
+
+.history > div {
+    flex-grow: 1;
+}
+
+.history > img:first-child {
+    flex: 0 0 150px;
+
+    width: 150px;
+    height: 150px;
+    border: solid 3px black;
+}
+
+.history > *:first-child ~ * {
+    margin: 0px 0px 0px 20px;
+}
+
+.history p {
+    margin: 0.5em 0;
+}
+
+.history .date {
+    color: grey;
+}
+
+.history .title {
+    font-size: 1.5em !important;
+}
+
+.history .comment {
+    margin-left: 20px;
+}
+
+.history .star {
+    color: orange;
+}
+
+.history input[type=submit] {
+    float: right;
+
+    border: solid 1.5px black;
+    background-color: red;
+    border-radius: 8px;
+
+    font-size: 1.5em;
+    padding: 5px 10px;
+}
+
+.row {
+    width: 100%;
+    margin: 10px auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.driver-profile {
+
+}

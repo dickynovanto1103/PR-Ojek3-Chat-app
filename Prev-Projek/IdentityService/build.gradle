@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+    id 'war'
+    id 'org.akhikhl.gretty'
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+
+    // https://mvnrepository.com/artifact/junit/junit
+    testCompile 'junit:junit:4.12'
+    // https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api
+    providedCompile 'javax.servlet:javax.servlet-api:4.0.0'
+    // https://mvnrepository.com/artifact/org.mindrot/jbcrypt
+    compile 'org.mindrot:jbcrypt:0.4'
+    // https://mvnrepository.com/artifact/javax.json/javax.json-api
+    compile 'javax.json:javax.json-api:1.0'
+    // https://mvnrepository.com/artifact/org.glassfish/javax.json
+    compile 'org.glassfish:javax.json:1.0'
+
+    // https://mvnrepository.com/artifact/mysql/mysql-connector-java
+    gretty 'mysql:mysql-connector-java:8.0.8-dmr'
+}

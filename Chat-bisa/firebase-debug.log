@@ -1,0 +1,36 @@
+[debug] [2017-11-27T09:52:43.924Z] ----------------------------------------------------------------------
+[debug] [2017-11-27T09:52:43.926Z] Command:       /usr/bin/node /usr/local/bin/firebase serve
+[debug] [2017-11-27T09:52:43.926Z] CLI Version:   3.15.2
+[debug] [2017-11-27T09:52:43.926Z] Platform:      linux
+[debug] [2017-11-27T09:52:43.926Z] Node Version:  v6.11.4
+[debug] [2017-11-27T09:52:43.926Z] Time:          Mon Nov 27 2017 16:52:43 GMT+0700 (WIB)
+[debug] [2017-11-27T09:52:43.926Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-11-27T09:52:43.934Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-11-27T09:52:43.934Z] > authorizing via signed-in user
+[debug] [2017-11-27T09:52:43.935Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2017-11-27T09:52:43.936Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token { refresh_token: '1/_I9hQ4kkDFKYbShVTH5fx6WF2tR6YmPBWQhKR7w80rs',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Mon Nov 27 2017 16:52:43 GMT+0700 (WIB)
+[debug] [2017-11-27T09:52:44.515Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-27T09:52:44.552Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/tugas-besar-3  
+ Mon Nov 27 2017 16:52:44 GMT+0700 (WIB)
+[debug] [2017-11-27T09:52:45.840Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-27T09:52:45.841Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/tugas-besar-3/tokens  
+ Mon Nov 27 2017 16:52:45 GMT+0700 (WIB)
+[debug] [2017-11-27T09:52:46.951Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/home/dicky/Documents/ITB/Semester 5/WBD/Tugas/Tubes 3 WBD/TugasBesar3_2017/Chat-bisa'...
+[info] 
+[debug] [2017-11-27T09:52:46.956Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/tugas-besar-3  
+ Mon Nov 27 2017 16:52:46 GMT+0700 (WIB)
+[debug] [2017-11-27T09:52:48.626Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-27T09:52:48.628Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/75908537450/clients/_:getWebAppConfig  
+ Mon Nov 27 2017 16:52:48 GMT+0700 (WIB)
+[debug] [2017-11-27T09:52:49.799Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: ./
+[info] ✔  hosting: Local server: http://localhost:5000
+
